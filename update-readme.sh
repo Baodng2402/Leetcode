@@ -7,6 +7,7 @@ cd "$script_dir"
 python3 "$script_dir/generate-progress.py"
 
 difficulties=("Easy" "Medium" "Hard")
+difficulty_emoji=("🟢" "🟡" "🔴")
 
 count_files() {
   local folder="$1"
@@ -80,13 +81,13 @@ write_solution_rows() {
     else
       problem_cell="$(escape_cell "$title")"
     fi
-    solution_cell="[View](<$relative_path>)"
+    solution_cell="[📄 View](<$relative_path>)"
 
     printf '| %s | %s | %s |\n' "$id" "$problem_cell" "$solution_cell"
   done < <(list_files "$folder")
 
   if [[ "$has_files" == "false" ]]; then
-    printf '| - | No solutions yet | - |\n'
+    printf '| — | *No solutions yet* | — |\n'
   fi
 }
 
@@ -96,32 +97,73 @@ hard_count="$(count_files "src/Hard")"
 total_count=$((easy_count + medium_count + hard_count))
 
 {
-  printf '# LeetCode Progress\n\n'
-  printf 'Solutions are organized by difficulty under `src/Easy`, `src/Medium`, and `src/Hard`.\n\n'
+  printf '<div align="center">\n\n'
+  printf '# 🧠 LeetCode Solutions\n\n'
+  printf '*Personal problem-solving journal — organized by difficulty*\n\n'
   printf '![Progress](./progress.svg)\n\n'
+  printf '[![Total](https://img.shields.io/badge/Total-%s-ffa116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com)\n' "$total_count"
+  printf '[![Easy](https://img.shields.io/badge/Easy-%s-00b8a3?style=for-the-badge)](src/Easy)\n' "$easy_count"
+  printf '[![Medium](https://img.shields.io/badge/Medium-%s-ffc01e?style=for-the-badge&labelColor=333)](src/Medium)\n' "$medium_count"
+  printf '[![Hard](https://img.shields.io/badge/Hard-%s-ff375f?style=for-the-badge)](src/Hard)\n\n' "$hard_count"
+  printf '</div>\n\n'
 
-  printf '## Summary\n\n'
-  printf '| Difficulty | Solved |\n'
-  printf '| --- | ---: |\n'
-  printf '| Easy | %s |\n' "$easy_count"
-  printf '| Medium | %s |\n' "$medium_count"
-  printf '| Hard | %s |\n' "$hard_count"
-  printf '| Total | %s |\n\n' "$total_count"
+  printf '%s\n\n' '---'
+  printf '## 📊 Summary\n\n'
+  printf '| Difficulty | Solved | Share |\n'
+  printf '|:-----------|-------:|------:|\n'
 
-  printf '## Solutions\n\n'
-  for difficulty in "${difficulties[@]}"; do
-    printf '### %s\n\n' "$difficulty"
+  share_of_total() {
+    local count="$1"
+    if [[ "$total_count" -eq 0 ]]; then
+      printf '0%%'
+      return
+    fi
+    printf '%s%%' "$(( count * 100 / total_count ))"
+  }
+
+  printf '| 🟢 Easy | **%s** | %s |\n' "$easy_count" "$(share_of_total "$easy_count")"
+  printf '| 🟡 Medium | **%s** | %s |\n' "$medium_count" "$(share_of_total "$medium_count")"
+  printf '| 🔴 Hard | **%s** | %s |\n' "$hard_count" "$(share_of_total "$hard_count")"
+  printf '| **Total** | **%s** | 100%% |\n\n' "$total_count"
+
+  printf '## 📁 Solutions\n\n'
+  printf '> Solutions live under `src/Easy`, `src/Medium`, and `src/Hard`.\n\n'
+
+  get_count() {
+    case "$1" in
+      Easy) printf '%s' "$easy_count" ;;
+      Medium) printf '%s' "$medium_count" ;;
+      Hard) printf '%s' "$hard_count" ;;
+    esac
+  }
+
+  for index in "${!difficulties[@]}"; do
+    difficulty="${difficulties[$index]}"
+    emoji="${difficulty_emoji[$index]}"
+    count="$(get_count "$difficulty")"
+
+    printf '<details%s>\n' "$( [[ "$count" -gt 0 ]] && printf ' open' )"
+    printf '<summary><b>%s %s</b> — %s problem(s)</summary>\n\n' "$emoji" "$difficulty" "$count"
     printf '| # | Problem | Solution |\n'
-    printf '| ---: | --- | --- |\n'
+    printf '|--:|:--------|:--------:|\n'
     write_solution_rows "$difficulty"
-    printf '\n'
+    printf '\n</details>\n\n'
   done
 
-  printf '## Workflow\n\n'
-  printf '1. Use the LeetCode VS Code extension and choose `Code Now`.\n'
-  printf '2. The solution file is created under `src/${difficulty}`.\n'
-  printf '3. Run `bash update-readme.sh` to refresh this README and `progress.svg`.\n'
-  printf '4. Run `bash push.sh` to update README, commit, and push.\n'
+  printf '%s\n\n' '---'
+  printf '## ⚙️ Workflow\n\n'
+  printf '| Step | Action |\n'
+  printf '|:-----|:-------|\n'
+  printf '| 1 | Open a problem in the **LeetCode VS Code** extension and click `Code Now` |\n'
+  printf '| 2 | Solution file is saved to `src/{difficulty}/[id]Problem Name.java` |\n'
+  printf '| 3 | Refresh docs: `bash update-readme.sh` |\n'
+  printf '| 4 | Commit & push: `bash push.sh` |\n\n'
+  printf '```bash\n'
+  printf '# Quick refresh\n'
+  printf 'bash update-readme.sh\n\n'
+  printf '# Refresh + commit + push\n'
+  printf 'bash push.sh\n'
+  printf '```\n'
 } > README.md
 
 printf 'Updated README.md and progress.svg\n'

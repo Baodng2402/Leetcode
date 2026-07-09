@@ -10,9 +10,9 @@ SRC = ROOT / "src"
 OUTPUT = ROOT / "progress.svg"
 
 DIFFICULTIES = (
-    ("Easy", "#22c55e"),
-    ("Medium", "#f59e0b"),
-    ("Hard", "#ef4444"),
+    ("Easy", "#00b8a3"),
+    ("Medium", "#ffc01e"),
+    ("Hard", "#ff375f"),
 )
 
 
@@ -25,13 +25,13 @@ def count_solutions(difficulty: str) -> int:
 
 def build_segments(counts: dict[str, int]) -> str:
     total = sum(counts.values())
-    radius = 68
+    radius = 72
     circumference = 2 * math.pi * radius
 
     if total == 0:
         return (
-            f'<circle cx="100" cy="100" r="{radius}" fill="none" '
-            'stroke="#e5e7eb" stroke-width="22" />'
+            f'<circle cx="120" cy="120" r="{radius}" fill="none" '
+            'stroke="#2d2d3a" stroke-width="18" />'
         )
 
     segments: list[str] = []
@@ -44,11 +44,11 @@ def build_segments(counts: dict[str, int]) -> str:
         length = count / total * circumference
         gap = circumference - length
         segments.append(
-            f'<circle cx="100" cy="100" r="{radius}" fill="none" '
-            f'stroke="{color}" stroke-width="22" '
+            f'<circle cx="120" cy="120" r="{radius}" fill="none" '
+            f'stroke="{color}" stroke-width="18" stroke-linecap="round" '
             f'stroke-dasharray="{length:.3f} {gap:.3f}" '
             f'stroke-dashoffset="{-offset:.3f}" '
-            'transform="rotate(-90 100 100)" />'
+            'transform="rotate(-90 120 120)" />'
         )
         offset += length
 
@@ -57,15 +57,17 @@ def build_segments(counts: dict[str, int]) -> str:
 
 def build_legend(counts: dict[str, int]) -> str:
     rows: list[str] = []
-    y = 58
+    y = 72
     for difficulty, color in DIFFICULTIES:
+        count = counts[difficulty]
+        rows.append(f'<circle cx="268" cy="{y - 4}" r="6" fill="{color}" />')
         rows.append(
-            f'<rect x="220" y="{y - 10}" width="12" height="12" rx="2" fill="{color}" />'
+            f'<text x="284" y="{y}" class="legend-label">{difficulty}</text>'
         )
         rows.append(
-            f'<text x="242" y="{y}" class="legend">{difficulty}: {counts[difficulty]}</text>'
+            f'<text x="390" y="{y}" class="legend-value" text-anchor="end">{count}</text>'
         )
-        y += 30
+        y += 36
     return "\n  ".join(rows)
 
 
@@ -73,19 +75,39 @@ def main() -> None:
     counts = {difficulty: count_solutions(difficulty) for difficulty, _ in DIFFICULTIES}
     total = sum(counts.values())
 
-    svg = f"""<svg width="420" height="200" viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LeetCode progress">
+    svg = f"""<svg width="480" height="240" viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LeetCode progress">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e" />
+      <stop offset="100%" stop-color="#16213e" />
+    </linearGradient>
+    <linearGradient id="ring-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffa116" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#ffa116" stop-opacity="0" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.35" />
+    </filter>
+  </defs>
   <style>
-    .title {{ fill: #111827; font: 700 18px Arial, sans-serif; }}
-    .total {{ fill: #111827; font: 700 28px Arial, sans-serif; text-anchor: middle; }}
-    .caption {{ fill: #6b7280; font: 500 12px Arial, sans-serif; text-anchor: middle; }}
-    .legend {{ fill: #374151; font: 600 14px Arial, sans-serif; }}
+    .title {{ fill: #f8fafc; font: 700 20px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }}
+    .subtitle {{ fill: #94a3b8; font: 500 12px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }}
+    .total {{ fill: #ffffff; font: 800 36px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-anchor: middle; }}
+    .caption {{ fill: #94a3b8; font: 600 11px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-anchor: middle; letter-spacing: 0.08em; }}
+    .legend-label {{ fill: #cbd5e1; font: 600 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }}
+    .legend-value {{ fill: #f8fafc; font: 700 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }}
+    .divider {{ stroke: #2d3748; stroke-width: 1; }}
   </style>
-  <rect width="420" height="200" rx="16" fill="#ffffff" />
-  <circle cx="100" cy="100" r="68" fill="none" stroke="#f3f4f6" stroke-width="22" />
+  <rect width="480" height="240" rx="20" fill="url(#bg)" />
+  <rect x="1" y="1" width="478" height="238" rx="19" fill="none" stroke="#ffa116" stroke-opacity="0.25" stroke-width="1" />
+  <circle cx="120" cy="120" r="88" fill="url(#ring-glow)" />
+  <circle cx="120" cy="120" r="{72 + 9}" fill="none" stroke="#2d2d3a" stroke-width="18" />
   {build_segments(counts)}
-  <text x="100" y="96" class="total">{total}</text>
-  <text x="100" y="116" class="caption">solved</text>
-  <text x="220" y="30" class="title">Progress by difficulty</text>
+  <text x="120" y="112" class="total">{total}</text>
+  <text x="120" y="134" class="caption">SOLVED</text>
+  <line x1="230" y1="40" x2="230" y2="200" class="divider" />
+  <text x="250" y="44" class="title">Progress</text>
+  <text x="250" y="62" class="subtitle">by difficulty</text>
   {build_legend(counts)}
 </svg>
 """

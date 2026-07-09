@@ -1,0 +1,21 @@
+<svg width="420" height="200" viewBox="0 0 420 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LeetCode progress">
+  <style>
+    .title { fill: #111827; font: 700 18px Arial, sans-serif; }
+    .total { fill: #111827; font: 700 28px Arial, sans-serif; text-anchor: middle; }
+    .caption { fill: #6b7280; font: 500 12px Arial, sans-serif; text-anchor: middle; }
+    .legend { fill: #374151; font: 600 14px Arial, sans-serif; }
+  </style>
+  <rect width="420" height="200" rx="16" fill="#ffffff" />
+  <circle cx="100" cy="100" r="68" fill="none" stroke="#f3f4f6" stroke-width="22" />
+  <circle cx="100" cy="100" r="68" fill="none" stroke="#22c55e" stroke-width="22" stroke-dasharray="406.911 20.346" stroke-dashoffset="-0.000" transform="rotate(-90 100 100)" />
+  <circle cx="100" cy="100" r="68" fill="none" stroke="#f59e0b" stroke-width="22" stroke-dasharray="20.346 406.911" stroke-dashoffset="-406.911" transform="rotate(-90 100 100)" />
+  <text x="100" y="96" class="total">21</text>
+  <text x="100" y="116" class="caption">solved</text>
+  <text x="220" y="30" class="title">Progress by difficulty</text>
+  <rect x="220" y="48" width="12" height="12" rx="2" fill="#22c55e" />
+  <text x="242" y="58" class="legend">Easy: 20</text>
+  <rect x="220" y="78" width="12" height="12" rx="2" fill="#f59e0b" />
+  <text x="242" y="88" class="legend">Medium: 1</text>
+  <rect x="220" y="108" width="12" height="12" rx="2" fill="#ef4444" />
+  <text x="242" y="118" class="legend">Hard: 0</text>
+</svg>

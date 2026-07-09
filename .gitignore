@@ -1,0 +1,8 @@
+.DS_Store
+*.class
+*.pyc
+__pycache__/
+bin/
+out/
+build/
+.idea/

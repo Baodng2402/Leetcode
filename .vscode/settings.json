@@ -1,0 +1,11 @@
+{
+  "leetcode.workspaceFolder": "/Users/gbzun/Desktop/myProject/leetcode",
+  "leetcode.defaultLanguage": "java",
+  "leetcode.filePath": {
+    "java": {
+      "folder": "src/${difficulty}",
+      "filename": "[${id}]${name}.${ext}"
+    }
+  },
+  "leetcode.showCommentDescription": true
+}

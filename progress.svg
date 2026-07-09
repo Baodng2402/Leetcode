@@ -25,19 +25,19 @@
   <rect x="1" y="1" width="478" height="238" rx="19" fill="none" stroke="#ffa116" stroke-opacity="0.25" stroke-width="1" />
   <circle cx="120" cy="120" r="88" fill="url(#ring-glow)" />
   <circle cx="120" cy="120" r="81" fill="none" stroke="#2d2d3a" stroke-width="18" />
-  <circle cx="120" cy="120" r="72" fill="none" stroke="#00b8a3" stroke-width="18" stroke-linecap="round" stroke-dasharray="430.847 21.542" stroke-dashoffset="-0.000" transform="rotate(-90 120 120)" />
-  <circle cx="120" cy="120" r="72" fill="none" stroke="#ffc01e" stroke-width="18" stroke-linecap="round" stroke-dasharray="21.542 430.847" stroke-dashoffset="-430.847" transform="rotate(-90 120 120)" />
-  <text x="120" y="112" class="total">21</text>
+  <circle cx="120" cy="120" r="72" fill="none" stroke="#00b8a3" stroke-width="18" stroke-linecap="round" stroke-dasharray="413.051 39.338" stroke-dashoffset="-0.000" transform="rotate(-90 120 120)" />
+  <circle cx="120" cy="120" r="72" fill="none" stroke="#ffc01e" stroke-width="18" stroke-linecap="round" stroke-dasharray="39.338 413.051" stroke-dashoffset="-413.051" transform="rotate(-90 120 120)" />
+  <text x="120" y="112" class="total">23</text>
   <text x="120" y="134" class="caption">SOLVED</text>
   <line x1="230" y1="40" x2="230" y2="200" class="divider" />
   <text x="250" y="44" class="title">Progress</text>
   <text x="250" y="62" class="subtitle">by difficulty</text>
   <circle cx="268" cy="68" r="6" fill="#00b8a3" />
   <text x="284" y="72" class="legend-label">Easy</text>
-  <text x="390" y="72" class="legend-value" text-anchor="end">20</text>
+  <text x="390" y="72" class="legend-value" text-anchor="end">21</text>
   <circle cx="268" cy="104" r="6" fill="#ffc01e" />
   <text x="284" y="108" class="legend-label">Medium</text>
-  <text x="390" y="108" class="legend-value" text-anchor="end">1</text>
+  <text x="390" y="108" class="legend-value" text-anchor="end">2</text>
   <circle cx="268" cy="140" r="6" fill="#ff375f" />
   <text x="284" y="144" class="legend-label">Hard</text>
   <text x="390" y="144" class="legend-value" text-anchor="end">0</text>

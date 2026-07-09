@@ -6,9 +6,9 @@
 
 ![Progress](./progress.svg)
 
-[![Total](https://img.shields.io/badge/Total-21-ffa116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com)
-[![Easy](https://img.shields.io/badge/Easy-20-00b8a3?style=for-the-badge)](src/Easy)
-[![Medium](https://img.shields.io/badge/Medium-1-ffc01e?style=for-the-badge&labelColor=333)](src/Medium)
+[![Total](https://img.shields.io/badge/Total-23-ffa116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com)
+[![Easy](https://img.shields.io/badge/Easy-21-00b8a3?style=for-the-badge)](src/Easy)
+[![Medium](https://img.shields.io/badge/Medium-2-ffc01e?style=for-the-badge&labelColor=333)](src/Medium)
 [![Hard](https://img.shields.io/badge/Hard-0-ff375f?style=for-the-badge)](src/Hard)
 
 </div>
@@ -19,17 +19,17 @@
 
 | Difficulty | Solved | Share |
 |:-----------|-------:|------:|
-| 🟢 Easy | **20** | 95% |
-| 🟡 Medium | **1** | 4% |
+| 🟢 Easy | **21** | 91% |
+| 🟡 Medium | **2** | 8% |
 | 🔴 Hard | **0** | 0% |
-| **Total** | **21** | 100% |
+| **Total** | **23** | 100% |
 
 ## 📁 Solutions
 
 > Solutions live under `src/Easy`, `src/Medium`, and `src/Hard`.
 
 <details open>
-<summary><b>🟢 Easy</b> — 20 problem(s)</summary>
+<summary><b>🟢 Easy</b> — 21 problem(s)</summary>
 
 | # | Problem | Solution |
 |--:|:--------|:--------:|
@@ -49,6 +49,7 @@
 | 111 | [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) | [📄 View](<src/Easy/[111]Minimum Depth of Binary Tree.java>) |
 | 112 | [Path Sum](https://leetcode.com/problems/path-sum/) | [📄 View](<src/Easy/[112]Path Sum.java>) |
 | 118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | [📄 View](<src/Easy/[118]Pascal's Triangle.java>) |
+| 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [📄 View](<src/Easy/[217]Contains Duplicate.java>) |
 | 345 | [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) | [📄 View](<src/Easy/[345]Reverse Vowels of a String.java>) |
 | 605 | [Can Place Flowers](https://leetcode.com/problems/can-place-flowers/) | [📄 View](<src/Easy/[605]Can Place Flowers.java>) |
 | 1071 | [Greatest Common Divisor of Strings](https://leetcode.com/problems/greatest-common-divisor-of-strings/) | [📄 View](<src/Easy/[1071]Greatest Common Divisor of Strings.java>) |
@@ -57,10 +58,11 @@
 </details>
 
 <details open>
-<summary><b>🟡 Medium</b> — 1 problem(s)</summary>
+<summary><b>🟡 Medium</b> — 2 problem(s)</summary>
 
 | # | Problem | Solution |
 |--:|:--------|:--------:|
+| 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [📄 View](<src/Medium/[7]Reverse Integer.java>) |
 | 151 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | [📄 View](<src/Medium/[151]Reverse Words in a String.java>) |
 
 </details>

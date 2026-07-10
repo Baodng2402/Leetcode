@@ -6,9 +6,9 @@
 
 ![Progress](./progress.svg)
 
-[![Total](https://img.shields.io/badge/Total-23-ffa116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com)
+[![Total](https://img.shields.io/badge/Total-26-ffa116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com)
 [![Easy](https://img.shields.io/badge/Easy-21-00b8a3?style=for-the-badge)](src/Easy)
-[![Medium](https://img.shields.io/badge/Medium-2-ffc01e?style=for-the-badge&labelColor=333)](src/Medium)
+[![Medium](https://img.shields.io/badge/Medium-5-ffc01e?style=for-the-badge&labelColor=333)](src/Medium)
 [![Hard](https://img.shields.io/badge/Hard-0-ff375f?style=for-the-badge)](src/Hard)
 
 </div>
@@ -19,10 +19,10 @@
 
 | Difficulty | Solved | Share |
 |:-----------|-------:|------:|
-| 🟢 Easy | **21** | 91% |
-| 🟡 Medium | **2** | 8% |
+| 🟢 Easy | **21** | 80% |
+| 🟡 Medium | **5** | 19% |
 | 🔴 Hard | **0** | 0% |
-| **Total** | **23** | 100% |
+| **Total** | **26** | 100% |
 
 ## 📁 Solutions
 
@@ -58,11 +58,14 @@
 </details>
 
 <details open>
-<summary><b>🟡 Medium</b> — 2 problem(s)</summary>
+<summary><b>🟡 Medium</b> — 5 problem(s)</summary>
 
 | # | Problem | Solution |
 |--:|:--------|:--------:|
 | 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [📄 View](<src/Medium/[7]Reverse Integer.java>) |
+| 19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [📄 View](<src/Medium/[19]Remove Nth Node From End of List.java>) |
+| 24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [📄 View](<src/Medium/[24]Swap Nodes in Pairs.java>) |
+| 29 | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | [📄 View](<src/Medium/[29]Divide Two Integers.java>) |
 | 151 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | [📄 View](<src/Medium/[151]Reverse Words in a String.java>) |
 
 </details>

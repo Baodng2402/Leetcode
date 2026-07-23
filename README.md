@@ -1,31 +1,19 @@
-<div align="center">
+# LeetCode, worked through
 
-# 🧠 LeetCode Solutions
+Solutions written in Java, kept as a record of how I approach and revisit
+algorithm problems.
 
-> A personal problem-solving journal — automatically tracked and organized by difficulty.
+`32 solved` · `26 easy` · `6 medium` · `0 hard`
 
-<br />
+![Problem-solving progress](./progress.svg)
 
-![Progress](./progress.svg)
-
-<br />
-
-[![Total](https://img.shields.io/badge/Total-32-ffa116?style=flat-square&logo=leetcode&logoColor=white)](https://leetcode.com)
-[![Easy](https://img.shields.io/badge/Easy-26-00b8a3?style=flat-square)](src/Easy)
-[![Medium](https://img.shields.io/badge/Medium-6-ffc01e?style=flat-square)](src/Medium)
-[![Hard](https://img.shields.io/badge/Hard-0-ff375f?style=flat-square)](src/Hard)
-
-</div>
-
----
-
-## 📁 Solutions
+## Solutions
 
 <details open>
-<summary><b>🟢 Easy</b> — 26 problems</summary>
+<summary><strong>Easy</strong> — 26 problems</summary>
 
-| # | Problem | Solution |
-|--:|:--------|:--------:|
+| # | Problem | Code |
+|---:|---|:---:|
 | 35 | [Search Insert Position](https://leetcode.com/problems/search-insert-position/) | [Java](<src/Easy/[35]Search Insert Position.java>) |
 | 58 | [Length of Last Word](https://leetcode.com/problems/length-of-last-word/) | [Java](<src/Easy/[58]Length of Last Word.java>) |
 | 66 | [Plus One](https://leetcode.com/problems/plus-one/) | [Java](<src/Easy/[66]Plus One.java>) |
@@ -56,10 +44,10 @@
 </details>
 
 <details open>
-<summary><b>🟡 Medium</b> — 6 problems</summary>
+<summary><strong>Medium</strong> — 6 problems</summary>
 
-| # | Problem | Solution |
-|--:|:--------|:--------:|
+| # | Problem | Code |
+|---:|---|:---:|
 | 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | [Java](<src/Medium/[7]Reverse Integer.java>) |
 | 19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [Java](<src/Medium/[19]Remove Nth Node From End of List.java>) |
 | 24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [Java](<src/Medium/[24]Swap Nodes in Pairs.java>) |
@@ -70,25 +58,26 @@
 </details>
 
 <details>
-<summary><b>🔴 Hard</b> — 0 problems</summary>
-
-| # | Problem | Solution |
-|--:|:--------|:--------:|
-| — | *No solutions yet* | — |
+<summary><strong>Hard</strong> — no solutions yet</summary>
 
 </details>
 
----
+## Workflow
 
-## ⚙️ Workflow
+Solutions are saved from the LeetCode VS Code extension to:
 
-1. **Code:** Open a problem via the LeetCode VS Code extension and click `Code Now`.
-2. **Save:** The solution is auto-saved to `src/{difficulty}/[id]Problem Name.java`.
-3. **Sync:** Run the shell scripts below to update the docs and push.
+```text
+src/<difficulty>/[id]Problem Name.java
+```
+
+To rebuild this index:
 
 ```bash
-# Update README progress and links
 bash update-readme.sh
+```
 
-# Update README, commit, and push to GitHub
+To rebuild, commit, and push:
+
+```bash
 bash push.sh
+```

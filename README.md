@@ -1,13 +1,21 @@
+<div align="center">
+
 # 🧠 LeetCode Solutions
 
 > A personal problem-solving journal — automatically tracked and organized by difficulty.
 
+<br />
+
 ![Progress](./progress.svg)
+
+<br />
 
 [![Total](https://img.shields.io/badge/Total-32-ffa116?style=flat-square&logo=leetcode&logoColor=white)](https://leetcode.com)
 [![Easy](https://img.shields.io/badge/Easy-26-00b8a3?style=flat-square)](src/Easy)
 [![Medium](https://img.shields.io/badge/Medium-6-ffc01e?style=flat-square)](src/Medium)
 [![Hard](https://img.shields.io/badge/Hard-0-ff375f?style=flat-square)](src/Hard)
+
+</div>
 
 ---
 

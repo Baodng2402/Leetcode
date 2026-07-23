@@ -6,9 +6,9 @@
 
 ![Progress](./progress.svg)
 
-[![Total](https://img.shields.io/badge/Total-26-ffa116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com)
-[![Easy](https://img.shields.io/badge/Easy-21-00b8a3?style=for-the-badge)](src/Easy)
-[![Medium](https://img.shields.io/badge/Medium-5-ffc01e?style=for-the-badge&labelColor=333)](src/Medium)
+[![Total](https://img.shields.io/badge/Total-32-ffa116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com)
+[![Easy](https://img.shields.io/badge/Easy-26-00b8a3?style=for-the-badge)](src/Easy)
+[![Medium](https://img.shields.io/badge/Medium-6-ffc01e?style=for-the-badge&labelColor=333)](src/Medium)
 [![Hard](https://img.shields.io/badge/Hard-0-ff375f?style=for-the-badge)](src/Hard)
 
 </div>
@@ -19,17 +19,17 @@
 
 | Difficulty | Solved | Share |
 |:-----------|-------:|------:|
-| 🟢 Easy | **21** | 80% |
-| 🟡 Medium | **5** | 19% |
+| 🟢 Easy | **26** | 81% |
+| 🟡 Medium | **6** | 18% |
 | 🔴 Hard | **0** | 0% |
-| **Total** | **26** | 100% |
+| **Total** | **32** | 100% |
 
 ## 📁 Solutions
 
 > Solutions live under `src/Easy`, `src/Medium`, and `src/Hard`.
 
 <details open>
-<summary><b>🟢 Easy</b> — 21 problem(s)</summary>
+<summary><b>🟢 Easy</b> — 26 problem(s)</summary>
 
 | # | Problem | Solution |
 |--:|:--------|:--------:|
@@ -49,7 +49,12 @@
 | 111 | [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/) | [📄 View](<src/Easy/[111]Minimum Depth of Binary Tree.java>) |
 | 112 | [Path Sum](https://leetcode.com/problems/path-sum/) | [📄 View](<src/Easy/[112]Path Sum.java>) |
 | 118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | [📄 View](<src/Easy/[118]Pascal's Triangle.java>) |
+| 136 | [Single Number](https://leetcode.com/problems/single-number/) | [📄 View](<src/Easy/[136]Single Number.java>) |
+| 144 | [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) | [📄 View](<src/Easy/[144]Binary Tree Preorder Traversal.java>) |
+| 145 | [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/) | [📄 View](<src/Easy/[145]Binary Tree Postorder Traversal.java>) |
 | 217 | [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) | [📄 View](<src/Easy/[217]Contains Duplicate.java>) |
+| 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [📄 View](<src/Easy/[242]Valid Anagram.java>) |
+| 258 | [Add Digits](https://leetcode.com/problems/add-digits/) | [📄 View](<src/Easy/[258]Add Digits.java>) |
 | 345 | [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) | [📄 View](<src/Easy/[345]Reverse Vowels of a String.java>) |
 | 605 | [Can Place Flowers](https://leetcode.com/problems/can-place-flowers/) | [📄 View](<src/Easy/[605]Can Place Flowers.java>) |
 | 1071 | [Greatest Common Divisor of Strings](https://leetcode.com/problems/greatest-common-divisor-of-strings/) | [📄 View](<src/Easy/[1071]Greatest Common Divisor of Strings.java>) |
@@ -58,7 +63,7 @@
 </details>
 
 <details open>
-<summary><b>🟡 Medium</b> — 5 problem(s)</summary>
+<summary><b>🟡 Medium</b> — 6 problem(s)</summary>
 
 | # | Problem | Solution |
 |--:|:--------|:--------:|
@@ -66,6 +71,7 @@
 | 19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | [📄 View](<src/Medium/[19]Remove Nth Node From End of List.java>) |
 | 24 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | [📄 View](<src/Medium/[24]Swap Nodes in Pairs.java>) |
 | 29 | [Divide Two Integers](https://leetcode.com/problems/divide-two-integers/) | [📄 View](<src/Medium/[29]Divide Two Integers.java>) |
+| 49 | [Group Anagrams](https://leetcode.com/problems/group-anagrams/) | [📄 View](<src/Medium/[49]Group Anagrams.java>) |
 | 151 | [Reverse Words in a String](https://leetcode.com/problems/reverse-words-in-a-string/) | [📄 View](<src/Medium/[151]Reverse Words in a String.java>) |
 
 </details>

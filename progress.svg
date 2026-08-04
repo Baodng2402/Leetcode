@@ -1,201 +1,44 @@
-<svg width="720" height="280" viewBox="0 0 720 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LeetCode progress">
+<svg width="480" height="240" viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LeetCode progress">
   <defs>
-    <linearGradient id="card-bg" x1="60" y1="20" x2="660" y2="260" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#0B1220"/>
-      <stop offset="0.55" stop-color="#0F172A"/>
-      <stop offset="1" stop-color="#111827"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e" />
+      <stop offset="100%" stop-color="#16213e" />
     </linearGradient>
-
-    <radialGradient id="glow-orange" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(164 130) rotate(90) scale(110)">
-      <stop stop-color="#F59E0B" stop-opacity="0.28"/>
-      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
-    </radialGradient>
-
-    <linearGradient id="ring-easy" x1="84" y1="58" x2="244" y2="208" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#34E7C1"/>
-      <stop offset="1" stop-color="#14B8A6"/>
+    <linearGradient id="ring-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffa116" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#ffa116" stop-opacity="0" />
     </linearGradient>
-
-    <linearGradient id="ring-medium" x1="102" y1="70" x2="226" y2="190" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#FFE082"/>
-      <stop offset="1" stop-color="#F59E0B"/>
-    </linearGradient>
-
-    <linearGradient id="accent-line" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#F59E0B" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#FB7185" stop-opacity="0.6"/>
-    </linearGradient>
-
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#020617" flood-opacity="0.45"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.35" />
     </filter>
-
-    <filter id="soft-glow" x="-30%" y="-30%" width="160%" height="160%">
-      <feGaussianBlur stdDeviation="10" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <clipPath id="card-clip">
-      <rect x="20" y="20" width="680" height="240" rx="28"/>
-    </clipPath>
   </defs>
-
   <style>
-    .title { fill: #F8FAFC; font: 700 26px "Segoe UI", system-ui, sans-serif; }
-    .subtitle { fill: #94A3B8; font: 500 13px "Segoe UI", system-ui, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
-    .kpi { fill: #FFFFFF; font: 800 42px "Segoe UI", system-ui, sans-serif; text-anchor: middle; }
-    .kpi-label { fill: #94A3B8; font: 700 12px "Segoe UI", system-ui, sans-serif; text-anchor: middle; letter-spacing: 0.18em; }
-    .section-label { fill: #CBD5E1; font: 600 14px "Segoe UI", system-ui, sans-serif; }
-    .section-value { fill: #F8FAFC; font: 700 18px "Segoe UI", system-ui, sans-serif; text-anchor: end; }
-    .pill-text { fill: #FDBA74; font: 700 12px "Segoe UI", system-ui, sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
-    .tiny { fill: #64748B; font: 600 12px "Segoe UI", system-ui, sans-serif; }
-
-    .card {
-      filter: url(#shadow);
-    }
-
-    .float {
-      animation: float 5s ease-in-out infinite;
-      transform-origin: center;
-    }
-
-    .ring-bg {
-      stroke: rgba(148, 163, 184, 0.14);
-      stroke-width: 18;
-    }
-
-    .ring-easy {
-      stroke: url(#ring-easy);
-      stroke-width: 18;
-      stroke-linecap: round;
-      stroke-dasharray: 359.592 92.798;
-      stroke-dashoffset: 359.592;
-      animation: reveal-easy 1.4s ease-out forwards;
-      transform-origin: center;
-    }
-
-    .ring-medium {
-      stroke: url(#ring-medium);
-      stroke-width: 18;
-      stroke-linecap: round;
-      stroke-dasharray: 92.798 359.592;
-      stroke-dashoffset: 452.39;
-      animation: reveal-medium 1.7s ease-out forwards;
-      transform-origin: center;
-    }
-
-    .glow-pulse {
-      animation: pulse 3.6s ease-in-out infinite;
-      transform-origin: center;
-    }
-
-    .shine {
-      animation: sweep 4.2s linear infinite;
-    }
-
-    .legend-row {
-      opacity: 0;
-      transform: translateY(8px);
-      animation: fade-up 0.7s ease-out forwards;
-    }
-
-    .legend-1 { animation-delay: 0.45s; }
-    .legend-2 { animation-delay: 0.65s; }
-    .legend-3 { animation-delay: 0.85s; }
-
-    .spark {
-      animation: blink 2.8s ease-in-out infinite;
-    }
-
-    .spark-2 { animation-delay: 0.9s; }
-    .spark-3 { animation-delay: 1.8s; }
-
-    @keyframes reveal-easy {
-      from { stroke-dashoffset: 359.592; }
-      to { stroke-dashoffset: 0; }
-    }
-
-    @keyframes reveal-medium {
-      from { stroke-dashoffset: 452.39; }
-      to { stroke-dashoffset: 359.592; }
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 0.65; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.04); }
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-4px); }
-    }
-
-    @keyframes fade-up {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 0.25; }
-      50% { opacity: 1; }
-    }
-
-    @keyframes sweep {
-      0% { transform: translateX(-160px); opacity: 0; }
-      15% { opacity: 0.16; }
-      50% { opacity: 0.22; }
-      85% { opacity: 0.1; }
-      100% { transform: translateX(760px); opacity: 0; }
-    }
+    .title { fill: #f8fafc; font: 700 20px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .subtitle { fill: #94a3b8; font: 500 12px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .total { fill: #ffffff; font: 800 36px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-anchor: middle; }
+    .caption { fill: #94a3b8; font: 600 11px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; text-anchor: middle; letter-spacing: 0.08em; }
+    .legend-label { fill: #cbd5e1; font: 600 14px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .legend-value { fill: #f8fafc; font: 700 16px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .divider { stroke: #2d3748; stroke-width: 1; }
   </style>
-
-  <g class="card">
-    <rect x="20" y="20" width="680" height="240" rx="28" fill="url(#card-bg)"/>
-    <rect x="20.75" y="20.75" width="678.5" height="238.5" rx="27.25" stroke="url(#accent-line)" stroke-opacity="0.2" stroke-width="1.5"/>
-  </g>
-
-  <g clip-path="url(#card-clip)">
-    <ellipse class="glow-pulse" cx="160" cy="130" rx="120" ry="96" fill="url(#glow-orange)"/>
-    <rect class="shine" x="-180" y="10" width="120" height="320" transform="rotate(18 0 0)" fill="white" opacity="0.05"/>
-  </g>
-
-  <g class="float">
-    <circle cx="164" cy="130" r="82" class="ring-bg"/>
-    <circle cx="164" cy="130" r="82" fill="none" class="ring-easy" transform="rotate(-90 164 130)"/>
-    <circle cx="164" cy="130" r="82" fill="none" class="ring-medium" transform="rotate(-90 164 130)"/>
-
-    <circle cx="164" cy="130" r="100" fill="none" stroke="#F59E0B" stroke-opacity="0.08" stroke-width="1.5"/>
-    <circle cx="164" cy="130" r="58" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)"/>
-
-    <text x="164" y="124" class="kpi">39</text>
-    <text x="164" y="148" class="kpi-label">PROBLEMS SOLVED</text>
-  </g>
-
-  <g filter="url(#soft-glow)">
-    <circle class="spark" cx="90" cy="70" r="2.5" fill="#FCD34D"/>
-    <circle class="spark spark-2" cx="242" cy="84" r="2" fill="#34E7C1"/>
-    <circle class="spark spark-3" cx="226" cy="196" r="2.5" fill="#FB7185"/>
-  </g>
-
-  <g transform="translate(316 64)">
-    <rect x="0" y="0" width="108" height="28" rx="14" fill="#172033" stroke="#F59E0B" stroke-opacity="0.16"/>
-    <text x="18" y="18" class="pill-text">LeetCode</text>
-  </g>
-
-  <text x="316" y="122" class="title">Progress Overview</text>
-  <text x="316" y="146" class="subtitle">Consistent practice, visible growth</text>
-
-  <line x1="316" y1="162" x2="648" y2="162" stroke="white" stroke-opacity="0.08"/>
-
-  <g class="legend-row legend-1" transform="translate(316 186)">
-    <circle cx="8" cy="0" r="6" fill="#14B8A6"/>
-    <text x="26" y="5" class="section-label">Easy</text>
-    <text x="332" y="5" class="section-value">31</text>
-  </g>
-
-  <g class="legend-row legend-2" transform="translate(316 216)">
-    <circle cx="8" cy="0" r="6" fill="#F59E0B"/>
-    <text x="26" y="5" class="section-label">Medium</text>
-    <text x="332" y="5" class="section-value">8</text>
+  <rect width="480" height="240" rx="20" fill="url(#bg)" />
+  <rect x="1" y="1" width="478" height="238" rx="19" fill="none" stroke="#ffa116" stroke-opacity="0.25" stroke-width="1" />
+  <circle cx="120" cy="120" r="88" fill="url(#ring-glow)" />
+  <circle cx="120" cy="120" r="81" fill="none" stroke="#2d2d3a" stroke-width="18" />
+  <circle cx="120" cy="120" r="72" fill="none" stroke="#00b8a3" stroke-width="18" stroke-linecap="round" stroke-dasharray="361.911 90.478" stroke-dashoffset="-0.000" transform="rotate(-90 120 120)" />
+  <circle cx="120" cy="120" r="72" fill="none" stroke="#ffc01e" stroke-width="18" stroke-linecap="round" stroke-dasharray="90.478 361.911" stroke-dashoffset="-361.911" transform="rotate(-90 120 120)" />
+  <text x="120" y="112" class="total">40</text>
+  <text x="120" y="134" class="caption">SOLVED</text>
+  <line x1="230" y1="40" x2="230" y2="200" class="divider" />
+  <text x="250" y="44" class="title">Progress</text>
+  <text x="250" y="62" class="subtitle">by difficulty</text>
+  <circle cx="268" cy="68" r="6" fill="#00b8a3" />
+  <text x="284" y="72" class="legend-label">Easy</text>
+  <text x="390" y="72" class="legend-value" text-anchor="end">32</text>
+  <circle cx="268" cy="104" r="6" fill="#ffc01e" />
+  <text x="284" y="108" class="legend-label">Medium</text>
+  <text x="390" y="108" class="legend-value" text-anchor="end">8</text>
+  <circle cx="268" cy="140" r="6" fill="#ff375f" />
+  <text x="284" y="144" class="legend-label">Hard</text>
+  <text x="390" y="144" class="legend-value" text-anchor="end">0</text>
+</svg>

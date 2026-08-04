@@ -6,8 +6,8 @@
 
 ![Progress](./progress.svg)
 
-[![Total](https://img.shields.io/badge/Total-39-ffa116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com)
-[![Easy](https://img.shields.io/badge/Easy-31-00b8a3?style=for-the-badge)](src/Easy)
+[![Total](https://img.shields.io/badge/Total-40-ffa116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com)
+[![Easy](https://img.shields.io/badge/Easy-32-00b8a3?style=for-the-badge)](src/Easy)
 [![Medium](https://img.shields.io/badge/Medium-8-ffc01e?style=for-the-badge&labelColor=333)](src/Medium)
 [![Hard](https://img.shields.io/badge/Hard-0-ff375f?style=for-the-badge)](src/Hard)
 
@@ -19,17 +19,17 @@
 
 | Difficulty | Solved | Share |
 |:-----------|-------:|------:|
-| 🟢 Easy | **31** | 79% |
+| 🟢 Easy | **32** | 80% |
 | 🟡 Medium | **8** | 20% |
 | 🔴 Hard | **0** | 0% |
-| **Total** | **39** | 100% |
+| **Total** | **40** | 100% |
 
 ## 📁 Solutions
 
 > Solutions live under `src/Easy`, `src/Medium`, and `src/Hard`.
 
 <details open>
-<summary><b>🟢 Easy</b> — 31 problem(s)</summary>
+<summary><b>🟢 Easy</b> — 32 problem(s)</summary>
 
 | # | Problem | Solution |
 |--:|:--------|:--------:|
@@ -64,6 +64,7 @@
 | 1022 | [Sum of Root To Leaf Binary Numbers](https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/) | [📄 View](<src/Easy/[1022]Sum of Root To Leaf Binary Numbers.java>) |
 | 1071 | [Greatest Common Divisor of Strings](https://leetcode.com/problems/greatest-common-divisor-of-strings/) | [📄 View](<src/Easy/[1071]Greatest Common Divisor of Strings.java>) |
 | 1431 | [Kids With the Greatest Number of Candies](https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/) | [📄 View](<src/Easy/[1431]Kids With the Greatest Number of Candies.java>) |
+| 3731 | [Find Missing Elements](https://leetcode.com/problems/find-missing-elements/) | [📄 View](<src/Easy/[3731]Find Missing Elements.java>) |
 
 </details>
 

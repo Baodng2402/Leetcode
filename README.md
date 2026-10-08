@@ -6,8 +6,8 @@
 
 ![Progress](./progress.svg)
 
-[![Total](https://img.shields.io/badge/Total-40-ffa116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com)
-[![Easy](https://img.shields.io/badge/Easy-32-00b8a3?style=for-the-badge)](src/Easy)
+[![Total](https://img.shields.io/badge/Total-41-ffa116?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com)
+[![Easy](https://img.shields.io/badge/Easy-33-00b8a3?style=for-the-badge)](src/Easy)
 [![Medium](https://img.shields.io/badge/Medium-8-ffc01e?style=for-the-badge&labelColor=333)](src/Medium)
 [![Hard](https://img.shields.io/badge/Hard-0-ff375f?style=for-the-badge)](src/Hard)
 
@@ -19,17 +19,17 @@
 
 | Difficulty | Solved | Share |
 |:-----------|-------:|------:|
-| 🟢 Easy | **32** | 80% |
-| 🟡 Medium | **8** | 20% |
+| 🟢 Easy | **33** | 80% |
+| 🟡 Medium | **8** | 19% |
 | 🔴 Hard | **0** | 0% |
-| **Total** | **40** | 100% |
+| **Total** | **41** | 100% |
 
 ## 📁 Solutions
 
 > Solutions live under `src/Easy`, `src/Medium`, and `src/Hard`.
 
 <details open>
-<summary><b>🟢 Easy</b> — 32 problem(s)</summary>
+<summary><b>🟢 Easy</b> — 33 problem(s)</summary>
 
 | # | Problem | Solution |
 |--:|:--------|:--------:|
@@ -58,6 +58,7 @@
 | 242 | [Valid Anagram](https://leetcode.com/problems/valid-anagram/) | [📄 View](<src/Easy/[242]Valid Anagram.java>) |
 | 257 | [Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/) | [📄 View](<src/Easy/[257]Binary Tree Paths.java>) |
 | 258 | [Add Digits](https://leetcode.com/problems/add-digits/) | [📄 View](<src/Easy/[258]Add Digits.java>) |
+| 326 | [Power of Three](https://leetcode.com/problems/power-of-three/) | [📄 View](<src/Easy/[326]Power of Three.java>) |
 | 345 | [Reverse Vowels of a String](https://leetcode.com/problems/reverse-vowels-of-a-string/) | [📄 View](<src/Easy/[345]Reverse Vowels of a String.java>) |
 | 412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | [📄 View](<src/Easy/[412]Fizz Buzz.java>) |
 | 605 | [Can Place Flowers](https://leetcode.com/problems/can-place-flowers/) | [📄 View](<src/Easy/[605]Can Place Flowers.java>) |
